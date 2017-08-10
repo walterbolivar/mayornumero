@@ -1,0 +1,23 @@
+
+int digitos (int n){
+	int c=0;
+		while (n>0){
+			n=n/10;
+			c++;
+		}
+		return(c);
+}
+
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+void main(){
+	int n,r ;
+cout<<"introducir un numero natural:";
+cin>> n;
+r=digitos(n);
+cout<<"la cantidad de digitos es: "<<r;
+getch();
+}
