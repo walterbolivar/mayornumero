@@ -1,0 +1,16 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+ void main(){
+	 int a,b,r=0,i;
+	 cout<<"introdusca el primer numero";
+	 cin>>a;
+	 cout<<"introduzca otro numero:";
+	 cin>>b;
+	 for(i=0;i<b;i++){
+		 r=r+a;
+	 }
+	 cout<<"la multiplicacion de "<<a<<"*"<<b<<"es...>>;"<<r;
+	 getch();
+ }
