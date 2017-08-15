@@ -1,0 +1,22 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int contardigitos(int n){
+	int c=0;
+	while(n>0){
+		n=n/10;
+		c++;
+	}
+	return(c);
+}
+
+void main(){
+	int nro,r;
+	cout<<"introducir un numero natural: ";
+	cin>> nro;
+	r=contardigitos(nro);
+	cout<<endl<<"la cantidad de digitos de:"<<nro<<",es.....>>>:"<<r;
+	getch();
+}
