@@ -1,0 +1,25 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int sumadigitospares (int n){
+	int s=0,d;
+	while(n>0){
+		d=n%10;
+		n=n/10;
+		if(d%2==0){
+			s=s+d;
+		}
+	}
+		return(s);
+}
+
+void main (){
+	int n,r;
+cout<< "introducir un numero";
+cin>>n;
+r= sumadigitospares(n);
+cout<<"la suma es:"<<r;
+getch();
+}
