@@ -1,0 +1,34 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+bool verificarsiestaordenado (int n){
+	int digact,digant;
+	bool k=true;
+	digant=n%10;
+	n=n/10;
+	while(n>0){
+		digact=n%10;
+		if(digact<=digant){
+			digant=digact;
+
+		}else{ k=false;
+			   
+	     }
+		n=n/10;
+	}
+		return(k);
+}
+
+void main (){
+	int n,r;
+cout<< "introducir un numero";
+cin>>n;
+if(verificarsiestaordenado(n)==true){
+	cout<<"los numeros estan ordenados";
+}else{
+	cout<<"los digitos del numero no estan ordenados";
+}
+getch();
+}
