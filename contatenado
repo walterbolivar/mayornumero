@@ -1,0 +1,10 @@
+int obtnesimoprimo(int n){
+	int c=0,cp=0;
+	while(cp<n){
+		c++;
+		if(verifsiesprimo(c)==true){
+			cp++;
+		}
+	}
+	return(c);
+}
