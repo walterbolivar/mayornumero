@@ -1,0 +1,39 @@
+#include <iostream>
+#include <conio.h>
+#include <math.h>
+using namespace std;
+
+int contardigitos(int n){
+	int c=0;
+	while(n>0){
+		n=n/10;
+		c++;
+	}
+	return(c);
+}
+
+int contatenar(int a,int b){
+	return(a*powf(10,contardigitos(b))+b);
+}
+
+int invertirnumero(int n){
+	int newnro=0,d;
+	while(n>0){
+		d=n%10;
+		newnro=newnro*10+d;
+		n=n/10;
+	}
+	return(newnro);
+}
+
+
+
+void main(){
+	int r,nro,nro2;
+	cout<<"ijntroducir primer numero:";
+	cin>> nro;
+	cout<<"introducir segundo numero:";
+	cin>> nro2;
+	r=contatenar(nro,nro2);
+	cout<<"resultado:"<<invertirnumero(r);
+	getch();}
