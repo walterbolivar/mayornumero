@@ -1,0 +1,29 @@
+int ordenar (int n){
+n=invertirnumero(n);
+int x=0,r1=n%10,r2;
+x=x*10+r1;
+n=n/10;
+while(n>0){
+
+r2=n%10;
+
+if(r2>r1){
+x=x*10+r2;
+r1=r2;
+
+}
+n=n/10;
+
+}
+
+
+
+return(x);
+}
+
+void main(){
+	int r;
+	cout<<"diga el numero "<<endl;
+	cin>>r;
+	cout<<"el nuevo numero es    :"<<ordenar(r);
+	getch();}
