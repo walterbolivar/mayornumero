@@ -1,0 +1,31 @@
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+
+void cargar(int vec[],int n){
+	int i;
+	for(i=0;i<n;i++){
+		cout<<"introducir elemento vec["<<i<<"]:";
+		cin >>vec[i];
+ }
+}
+
+
+void mostrar(int vec[],int n){
+int i;
+cout<<"\n\nel contenido del vector es......>>>>: \n";
+for(i=0;i<n;i++){
+	cout<< vec[i]<<" ";
+ }
+}
+
+void main(){
+	int vec[50],n;
+	cout<<"cuantos elementos para el vector";
+	cin>>n;
+	cargar(vec,n);
+	mostrar(vec,n);
+	getch();
+}
