@@ -1,0 +1,73 @@
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+
+void cargar(int vec[],int n){
+	int i;
+	for(i=0;i<n;i++){
+		cout<<"introducir elemento vec["<<i<<"]:";
+		cin >>vec[i];
+ }
+}
+
+
+void mostrar(int vec[],int n){
+int i;
+cout<<"\n\nel contenido del vector es......>>>>: \n";
+for(i=0;i<n;i++){
+	cout<< vec[i]<<" ";
+ }
+}
+
+int invertirnumero(int vec[],int n){
+	int i,aux;
+	for(i=0;i<n/2;i++){
+		aux=vec[i];
+		vec[i]=vec[n-1-i];
+		vec[n-1-i]=aux;
+	}
+	return(aux);
+}
+
+bool verifsiexisteElemento(int vec[],int n,int elem){
+	int i;
+	bool k=false;
+	for(i=0;i<n;i++){
+		if(vec[i]==elem){
+			k=true;
+			i=n;
+		}
+	}
+	return(k);
+}
+
+void interseccionVectores(int vA[],int nA,int vB[],int nB,int vC[],int &nC){
+int i;
+nC=0;
+for(i=0;i<nA;i++){
+	if(verifsiexisteElemento(vB,nB,vA[i])==true){
+		vC[nC]=vA[i];
+		nC++;
+	}
+
+ }
+}
+
+
+void main(){
+	int vec[50],n,vecB[50],nB,vecC[50],nC=0;
+	cout<<"cuantos elementos para el vector A";
+	cin>>n;
+	cargar(vec,n);
+	cout<<"cuantos elementos para el vector B";
+	cin>>nB;
+	cargar(vecB,nB);
+	interseccionVectores(vec,n,vecB,nB,vecC,nC);
+	mostrar(vec,n);
+	mostrar(vecB,nB);
+	mostrar(vecC,nC);
+	getch();
+}
+
